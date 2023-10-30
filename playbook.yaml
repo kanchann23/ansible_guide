@@ -1,0 +1,16 @@
+---
+- name: Install Apache on EC2
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Update package cache and install Apache
+      package:
+        name: apache2 
+        state: present
+
+    - name: Start Apache service
+      service:
+        name: apache2
+        state: started
+        enabled: yes

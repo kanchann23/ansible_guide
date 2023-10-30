@@ -1,0 +1,5 @@
+all:
+  hosts:
+    3.111.53.148:
+      ansible_ssh_user: ubuntu
+      ansible_ssh_private_key_file: /home/user/Downloads/ansible-key.pem
